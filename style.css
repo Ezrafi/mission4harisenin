@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f4f2;
+    padding: 24px 16px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+
+#user-name {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+#user-job {
+    margin: 2px 0 0;
+    font-size: 0.8rem;
+    color: #28a745;
+    font-weight: 500;
+}
+
+.time-info p {
+    font-size: 0.78rem;
+    color: #aaa;
+    background: #f5f5f5;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* Input Section */
+.input-section {
+    margin-bottom: 28px;
+}
+
+textarea {
+    width: 100%;
+    height: 72px;
+    padding: 12px 14px;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    resize: none;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 3px rgba(40,167,69,0.1);
+}
+
+textarea::placeholder {
+    color: #bbb;
+}
+
+.input-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+select {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #e8e8e8;
+    font-family: inherit;
+    font-size: 0.83rem;
+    color: #555;
+    background: #fafafa;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+select:focus {
+    border-color: #28a745;
+}
+
+#submit-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    flex-grow: 1;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+#submit-btn:hover { background: #22963d; }
+#submit-btn:active { transform: scale(0.98); }
+
+/* List Section */
+.list-section {
+    margin-bottom: 24px;
+}
+
+.list-section h2 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Task Item */
+.task-item {
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    padding: 12px 14px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: box-shadow 0.15s, transform 0.1s;
+}
+
+.task-item:hover {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+    transform: translateY(-1px);
+}
+
+.task-item input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #28a745;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.task-info { flex-grow: 1; min-width: 0; }
+.task-info span { font-size: 0.9rem; color: #1a1a1a; display: block; }
+.task-info p { margin: 3px 0 0; font-size: 0.74rem; color: #bbb; }
+
+.completed { text-decoration: line-through; color: #ccc; }
+
+/* Warna Prioritas */
+.priority-High   { border-left: 4px solid #ef4444; border-radius: 0 12px 12px 0; }
+.priority-Medium { border-left: 4px solid #f97316; border-radius: 0 12px 12px 0; }
+.priority-Low    { border-left: 4px solid #3b82f6; border-radius: 0 12px 12px 0; }
+
+/* Tombol Bahaya */
+.danger-btn {
+    width: 100%;
+    background: #fff;
+    color: #ef4444;
+    border: 1.5px solid #fca5a5;
+    border-radius: 10px;
+    padding: 11px;
+    margin-top: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.danger-btn:hover { background: #fef2f2; border-color: #ef4444; }
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ddd;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: color 0.15s, background 0.15s;
+}
+
+.delete-btn:hover { color: #ef4444; background: #fef2f2; }
+
+/* Footer */
+footer {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 16px;
+}

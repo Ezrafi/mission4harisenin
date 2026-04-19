@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-info">
+                <h1 id="user-name">Atha Ezrafi</h1>
+                <p id="user-job">Software Developer</p>
+            </div>
+            <div class="time-info">
+                <p id="current-date"></p>
+            </div>
+        </header>
+
+        <section class="input-section">
+            <textarea id="task-input" placeholder="Tulis tugas baru di sini..."></textarea>
+            <div class="input-controls">
+                <select id="priority-input">
+                    <option value="Low">Low Priority</option>
+                    <option value="Medium">Medium Priority</option>
+                    <option value="High">High Priority</option>
+                </select>
+                <button id="submit-btn">Tambah Tugas</button>
+            </div>
+        </section>
+
+        <section class="list-section">
+            <h2>Daftar To-Do</h2>
+            <div id="todo-list" class="task-container">
+                </div>
+        </section>
+
+        <section class="list-section">
+            <h2>Selesai (Done)</h2>
+            <div id="done-list" class="task-container">
+                </div>
+        </section>
+
+        <footer>
+            <button id="delete-all-btn" class="danger-btn">Hapus Semua Daftar</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
